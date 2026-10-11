@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Code Reviewer</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>AI Code Reviewer</h2>
+        <p class="subtitle">Paste your code below and get quick suggestions.</p>
+
+        <form method="POST">
+            <textarea name="code_input" placeholder="Paste your code here..." rows="12"></textarea>
+            <button type="submit">Review Code</button>
+        </form>
+
+        {% if result %}
+        <div class="result-box">
+            <h3>Review Output</h3>
+            <pre>{{ result }}</pre>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
